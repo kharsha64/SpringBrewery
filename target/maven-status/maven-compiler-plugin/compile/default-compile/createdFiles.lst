@@ -1,0 +1,9 @@
+com/springapp/springbrewery/v1/dto/BeerDTO.class
+com/springapp/springbrewery/v1/entity/Beer.class
+com/springapp/springbrewery/v1/services/BeerService.class
+com/springapp/springbrewery/v1/dto/BeerStyleEnum.class
+com/springapp/springbrewery/v1/repository/BeerRepository.class
+com/springapp/springbrewery/v1/dto/BeerDTO$BeerDTOBuilder.class
+com/springapp/springbrewery/v1/controller/BeerController.class
+com/springapp/springbrewery/SpringBreweryApplication.class
+com/springapp/springbrewery/v1/services/BeerServiceImpl.class
