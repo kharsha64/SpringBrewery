@@ -1,19 +1,14 @@
 package com.springapp.springbrewery.v1.entity;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import java.math.BigDecimal;
+import javax.persistence.*;
 import java.time.OffsetDateTime;
+import java.util.List;
 
 @Entity
-@Getter @Setter @NoArgsConstructor @AllArgsConstructor
+@Data
+@NoArgsConstructor @AllArgsConstructor
 public class Beer {
     @Id
     @GeneratedValue
@@ -37,6 +32,9 @@ public class Beer {
     @Column(name="MODIFIED_DATE")
     private OffsetDateTime modifiedDate;
 
-    @Column(nullable = false)
-    private BigDecimal price;
+    @OneToMany(mappedBy = "beer", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+    private List<CountriesAvailable> countriesAvailable;
+
+    @OneToOne(mappedBy = "beer", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+    private Manufacturer manufacturer;
 }

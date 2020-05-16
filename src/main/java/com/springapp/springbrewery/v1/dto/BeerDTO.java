@@ -5,8 +5,8 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import java.math.BigDecimal;
 import java.time.OffsetDateTime;
+import java.util.List;
 
 @Data
 @NoArgsConstructor
@@ -23,6 +23,8 @@ public class BeerDTO {
     private OffsetDateTime createdDate;
     private OffsetDateTime modifiedDate;
 
-    private BigDecimal price;
+    private List<CountriesAvailableDTO> countriesAvailableDTOList;
+
+    private ManufacturerDTO manufacturer;
 
 }
